@@ -18,7 +18,7 @@ def run_preflight(server_args):
     if report['status']=='SKIPPED_EXPECTED_VRAM_LIMIT':
         print('추론을 건너뜁니다: 현재 GPU 메모리가 공식 RoboTwin 요구량(약 24GB)보다 작습니다.\n'
               '모델과 평가용 시뮬레이터를 시작하지 않았습니다.\n'
-              '이 PC에서는 README STEP 9(기존 데이터 검증)와 STEP 10(loader 검사)을 진행하세요.',flush=True)
+              '이 PC에서는 manage.py validate와 train --dry-run으로 데이터와 loader를 확인하세요.',flush=True)
         return False
     if report['status']!='PREFLIGHT_PASSED':raise SystemExit('INFERENCE PREFLIGHT FAILED: unexpected status')
     return True

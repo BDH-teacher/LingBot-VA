@@ -1,0 +1,13 @@
+name: ur5-ros
+channels:
+  - conda-forge
+  - robostack-jazzy
+  - nodefaults
+dependencies:
+  - python=3.12
+  - pip
+  - ros-jazzy-ros-base
+  - ros-jazzy-control-msgs
+  - ros-jazzy-ur-dashboard-msgs
+  - ros-jazzy-ur-msgs
+  - ros-jazzy-moveit-msgs

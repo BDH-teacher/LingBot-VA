@@ -1,13 +1,27 @@
-# Python environments
+# Conda environments
 
-| Environment | Python | PyTorch | Purpose |
-| --- | --- | --- | --- |
-| robotwin | 3.10.16 | 2.4.1 / cu121 | SAPIEN, CuRobo, demonstration collection |
-| lingbot | 3.10.16 | 2.9.0 / cu126 | Model, LeRobot data, latent extraction |
-| .venv-ros | System Python 3.12 | None required | ROS 2 Jazzy transport |
+| Environment | Definition | Purpose |
+| --- | --- | --- |
+| robotwin | [robotwin.yml](robotwin.yml) | Python 3.10.16; SAPIEN and CuRobo; PyTorch 2.4.1/cu121 |
+| lingbot | [lingbot.yml](lingbot.yml) | Python 3.10.16; LingBot and LeRobot; PyTorch 2.9.0/cu126 |
+| ur5-ros (optional) | [ur5-ros.yml](ur5-ros.yml) | Python 3.12; RoboStack Jazzy transport/message dependencies |
 
-Use the setup scripts in the root README. They install the matching PyTorch wheels separately from the requirements here. LeRobot 0.3.3 is installed with `--no-deps` because the upstream model requires a different PyTorch version; optional LeRobot device/UI features are not part of this setup.
+From the repository root:
 
-Shell entry points use `conda run`, so manual activation is optional. Set `CONDA_EXE` if Conda is not on PATH or installed in the usual location.
+```bash
+conda run --no-capture-output -n base python scripts/manage.py create-envs
+conda run --no-capture-output -n base python scripts/manage.py install-sim
+conda run --no-capture-output -n base python scripts/manage.py install-model
+```
 
-`bash scripts/export_versions.sh` saves local Conda history, pip package lists, and source revision checks in `local/environment/`. These describe the installed machine and are excluded from Git; installation scripts and requirements remain the reproducible setup inputs.
+`create-envs` preserves existing environments. The installer tasks install their matching PyTorch wheels separately from the requirement lists. LeRobot 0.3.3 uses `--no-deps` to retain the model's PyTorch version; optional LeRobot device/UI features are outside this setup.
+
+Run tasks through `scripts/manage.py` using `conda run`, or activate Conda and run `python scripts/manage.py`. The launcher sets paths only for child processes. It never writes `.bashrc`, `.profile`, or global Conda configuration. No system Python or system pip is used by workflow entry points.
+
+The optional ROS environment uses the channels in its manifest, without mixing `/opt/ros` or system Python packages. `prepare-ros` creates the environment and checks imports; no ROS nodes or drivers are started. Installation and physical transport remain unverified on this machine.
+
+```bash
+conda run --no-capture-output -n base python scripts/manage.py export-versions
+```
+
+This records installed versions in ignored `local/environment/`. The YAML files in this directory are portable setup inputs, not machine exports. CUDA driver and Vulkan support are host prerequisites rather than Conda packages.

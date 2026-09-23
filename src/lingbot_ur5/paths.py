@@ -14,12 +14,12 @@ def resolve_inference_checkpoint(value):
 
 def model_path():
     path=ROOT/'outputs/runtime/lingbot-va'
-    if not path.exists(): raise FileNotFoundError('Run scripts/05_install_lingbot.sh first')
+    if not path.exists(): raise FileNotFoundError('Run conda run -n base python scripts/manage.py install-model first')
     for p in (path,path/'wan_va'):
         if str(p) not in sys.path:sys.path.insert(0,str(p))
     return path
 def robotwin_path():
     path=ROOT/'outputs/runtime/robotwin'
-    if not path.exists(): raise FileNotFoundError('Run scripts/03_test_robotwin.sh first')
+    if not path.exists(): raise FileNotFoundError('Run conda run -n base python scripts/manage.py check-sim first')
     sys.path.insert(0,str(path));os.chdir(path)
     return path

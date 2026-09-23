@@ -5,7 +5,7 @@ target.mkdir(parents=True,exist_ok=True)
 for name in ('envs','task_config','description','script'):
     shutil.copytree(source/name,target/name,dirs_exist_ok=True,ignore=shutil.ignore_patterns('__pycache__'))
 assets=source/'assets'
-if not (assets/'embodiments/ur5-wsg/config.yml').exists():raise FileNotFoundError('UR5 assets missing; bash scripts/download_assets.sh')
+if not (assets/'embodiments/ur5-wsg/config.yml').exists():raise FileNotFoundError('UR5 assets missing; conda run -n robotwin python scripts/manage.py download-assets')
 # Generated embodiment config changes live only in the overlay.
 asset_target=target/'assets';asset_target.mkdir(exist_ok=True)
 for p in assets.iterdir():

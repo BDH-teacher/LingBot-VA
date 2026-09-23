@@ -21,7 +21,6 @@ __pycache__/
 /STATUS.md
 /HANDOFF.md
 /PLAN.md
-/envs/*.yml
 /envs/*_pip_freeze.txt
 .env.*
 !.env.example
