@@ -1,0 +1,8 @@
+{
+  "task": "move_can_pot", "embodiment": "ur5-wsg", "active_arm": "left",
+  "single_articulation": true, "save_freq": 10, "physics_hz": 250,
+  "action_hz": 25, "latent_frame_stride": 4,
+  "instruction": "Pick up the can with the left arm and place it beside the pot.",
+  "max_attempts_per_episode": 20, "seed": 0, "randomization": false,
+  "head_camera": {"position": [0.4,0.4,1.55], "target": [-0.1,-0.05,0.85]}
+}

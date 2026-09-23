@@ -1,0 +1,81 @@
+{
+  "asset": "ur5-wsg",
+  "joint_names": [
+    "shoulder_pan_joint",
+    "shoulder_lift_joint",
+    "elbow_joint",
+    "wrist_1_joint",
+    "wrist_2_joint",
+    "wrist_3_joint"
+  ],
+  "arm_dof": 6,
+  "joint_limits": {
+    "lower": [
+      -3.142,
+      -3.142,
+      -3.142,
+      -1.75,
+      -3.141592653589793,
+      -3.141592653589793
+    ],
+    "upper": [
+      3.142,
+      0.0,
+      3.142,
+      1.75,
+      3.141592653589793,
+      3.141592653589793
+    ],
+    "velocity": [
+      3.15,
+      3.15,
+      3.15,
+      3.2,
+      3.2,
+      3.2
+    ],
+    "effort": [
+      150.0,
+      150.0,
+      150.0,
+      100.0,
+      100.0,
+      100.0
+    ]
+  },
+  "urdf_sha256": "3fb7a965dd5c2d04f9f6ffbda7a3c67d88fe1d7362bc6be1f57f3dbe4efe8cb4",
+  "meshes": [
+    "meshes/ur5/visual/base.glb",
+    "meshes/ur5/collision/base.stl",
+    "meshes/ur5/visual/shoulder.glb",
+    "meshes/ur5/collision/shoulder.stl",
+    "meshes/ur5/visual/upperarm.glb",
+    "meshes/ur5/collision/upperarm.stl",
+    "meshes/ur5/visual/forearm.glb",
+    "meshes/ur5/collision/forearm.stl",
+    "meshes/ur5/visual/wrist1.glb",
+    "meshes/ur5/collision/wrist1.stl",
+    "meshes/ur5/visual/wrist2.glb",
+    "meshes/ur5/collision/wrist2.stl",
+    "meshes/ur5/visual/wrist3.glb",
+    "meshes/ur5/collision/wrist3.stl",
+    "meshes/ur5/visual/camera_base_ur5.glb",
+    "meshes/ur5/visual/camera.glb",
+    "./meshes/gripper/WSG50_110.stl",
+    "./meshes/gripper/WSG50_110.stl",
+    "./meshes/gripper/GUIDE_WSG50_110.stl",
+    "./meshes/gripper/GUIDE_WSG50_110.stl",
+    "./meshes/gripper/WSG-FMF.stl",
+    "./meshes/gripper/WSG-FMF.stl",
+    "./meshes/gripper/GUIDE_WSG50_110.stl",
+    "./meshes/gripper/GUIDE_WSG50_110.stl",
+    "./meshes/gripper/WSG-FMF.stl",
+    "./meshes/gripper/WSG-FMF.stl"
+  ],
+  "meshes_verified": true,
+  "srdf_exists": true,
+  "eef_joint": "ee_fixed_joint",
+  "move_group": "ee_link",
+  "gripper": "WSG base_joint_gripper_left/right",
+  "source_zip_revision": "785feb15aa4a4f532395ad2b1d2be5f28cb561ad"
+}

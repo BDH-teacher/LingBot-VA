@@ -1,0 +1,42 @@
+--- a/envs/_base_task.py
++++ b/envs/_base_task.py
+@@ -172,6 +172,7 @@
+             nonlocal self, is_stable, actors_list, actors_pose_list
+             for _ in range(times):
+                 self.scene.step()
++                if hasattr(self, "_after_sim_step"): self._after_sim_step()
+                 for idx, actor in enumerate(actors_list):
+                     actors_pose_list[idx].append(actor.get_pose())
+ 
+@@ -186,6 +187,7 @@
+         is_stable = True
+         for _ in range(2000):
+             self.scene.step()
++            if hasattr(self, "_after_sim_step"): self._after_sim_step()
+         for idx, actor in enumerate(actors_list):
+             actors_pose_list.append([actor.get_pose()])
+         check(500)
+@@ -869,6 +871,7 @@
+                 now_right_id += 1
+ 
+             self.scene.step()
++            if hasattr(self, "_after_sim_step"): self._after_sim_step()
+             if self.render_freq and i % self.render_freq == 0:
+                 self._update_render()
+                 self.viewer.render()
+@@ -1462,6 +1465,7 @@
+                 )  # TODO
+ 
+             self.scene.step()
++            if hasattr(self, "_after_sim_step"): self._after_sim_step()
+ 
+             if self.render_freq and control_idx % self.render_freq == 0:
+                 self._update_render()
+@@ -1652,6 +1656,7 @@
+                 now_right_id += 1
+ 
+             self.scene.step()
++            if hasattr(self, "_after_sim_step"): self._after_sim_step()
+             self._update_render()
+                 
+             if self.check_success():

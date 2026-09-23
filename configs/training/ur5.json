@@ -1,0 +1,10 @@
+{
+  "dataset": "datasets/ur5_move_can_pot",
+  "checkpoint": "checkpoints/pretrained/lingbot-va-base",
+  "steps": 3000, "lr": 0.00001, "batch_size": 1, "grad_accum": 1,
+  "output_dir": "checkpoints/lingbot_ur5",
+  "save_interval": 250, "load_worker": 0,
+  "attn_mode": "flex", "param_dtype": "bfloat16",
+  "enable_wandb": false, "gradient_checkpointing": true,
+  "source_reference": "Official robotwin_train uses 50000 steps; 3000 is the paper real-task post-training reference."
+}

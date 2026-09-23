@@ -1,0 +1,17 @@
+--- a/wan_va/modules/model.py
++++ b/wan_va/modules/model.py
+@@ -28,8 +28,12 @@
+ 
+ try:
+     from flash_attn_interface import flash_attn_func
+-except:
+-    from flash_attn import flash_attn_func
++except ImportError:
++    try:
++        from flash_attn import flash_attn_func
++    except ImportError:
++        def flash_attn_func(*args, **kwargs):
++            raise RuntimeError("FlashAttention is not installed; use official torch or flex backend")
+ 
+ __all__ = ['WanTransformer3DModel']
+ 

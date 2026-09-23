@@ -1,0 +1,15 @@
+{
+  "hardware_validated": false,
+  "robot_type": "ur5", "robot_ip": null,
+  "calibration_file": null, "safety_config": null,
+  "camera_factory": null, "camera_config": {},
+  "gripper_factory": null, "gripper_config": {},
+  "tcp_link": null, "world_frame": null,
+  "controller": "/scaled_joint_trajectory_controller/follow_joint_trajectory",
+  "joint_state_topic": "/joint_states",
+  "io_state_topic": "/io_and_status_controller/io_states",
+  "program_running_topic": "/io_and_status_controller/robot_program_running",
+  "safety_mode_topic": "/io_and_status_controller/safety_mode",
+  "robot_mode_topic": "/io_and_status_controller/robot_mode",
+  "fk_service": "/compute_fk", "operator_approved": false
+}

@@ -1,0 +1,10 @@
+{
+  "host": "127.0.0.1",
+  "port": 29056,
+  "distributed_port": 29061,
+  "enable_offload": true,
+  "attention": "torch",
+  "video_steps": 25,
+  "action_steps": 50,
+  "min_gpu_gib": 23
+}

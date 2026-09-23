@@ -1,0 +1,205 @@
+{
+  "repos": {
+    "lingbot-va": {
+      "url": "https://github.com/robbyant/lingbot-va.git",
+      "commit": "7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb"
+    },
+    "RoboTwin": {
+      "url": "https://github.com/RoboTwin-Platform/RoboTwin.git",
+      "commit": "96c1feab536306b50c26af200044fcdf126e8904"
+    },
+    "RoboTwin-lingbot": {
+      "url": "https://github.com/RoboTwin-Platform/RoboTwin.git",
+      "commit": "2eeec322d95799f537cbfe5f291a8220d965ccb8"
+    },
+    "curobo": {
+      "url": "https://github.com/NVlabs/curobo.git",
+      "commit": "2fbffc35225398cf9d5f382804faa9de2608753b",
+      "tag": "v0.7.6"
+    }
+  },
+  "huggingface": {
+    "robbyant/lingbot-va-base": {
+      "revision": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+      "type": "model",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 1634
+        },
+        {
+          "path": "README.md",
+          "size": 4170
+        },
+        {
+          "path": "assets/teaser.png",
+          "size": 1107098
+        },
+        {
+          "path": "text_encoder/config.json",
+          "size": 855
+        },
+        {
+          "path": "text_encoder/model-00001-of-00003.safetensors",
+          "size": 4935812536
+        },
+        {
+          "path": "text_encoder/model-00002-of-00003.safetensors",
+          "size": 4983103192
+        },
+        {
+          "path": "text_encoder/model-00003-of-00003.safetensors",
+          "size": 1442935480
+        },
+        {
+          "path": "text_encoder/model.safetensors.index.json",
+          "size": 22476
+        },
+        {
+          "path": "tokenizer/special_tokens_map.json",
+          "size": 7079
+        },
+        {
+          "path": "tokenizer/spiece.model",
+          "size": 4548313
+        },
+        {
+          "path": "tokenizer/tokenizer.json",
+          "size": 16837459
+        },
+        {
+          "path": "tokenizer/tokenizer_config.json",
+          "size": 61758
+        },
+        {
+          "path": "transformer/config.json",
+          "size": 450
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+          "size": 4821987820
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+          "size": 4821655760
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+          "size": 535373816
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model.safetensors.index.json",
+          "size": 74936
+        },
+        {
+          "path": "vae/config.json",
+          "size": 1701
+        },
+        {
+          "path": "vae/diffusion_pytorch_model.safetensors",
+          "size": 2818777808
+        }
+      ]
+    },
+    "robbyant/lingbot-va-posttrain-robotwin": {
+      "revision": "8c9dea8abbc5c91cc9e18bc3264b8915083bbe70",
+      "type": "model",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 1634
+        },
+        {
+          "path": "README.md",
+          "size": 4170
+        },
+        {
+          "path": "assets/teaser.png",
+          "size": 1107098
+        },
+        {
+          "path": "text_encoder/config.json",
+          "size": 855
+        },
+        {
+          "path": "text_encoder/model-00001-of-00003.safetensors",
+          "size": 4935812536
+        },
+        {
+          "path": "text_encoder/model-00002-of-00003.safetensors",
+          "size": 4983103192
+        },
+        {
+          "path": "text_encoder/model-00003-of-00003.safetensors",
+          "size": 1442935480
+        },
+        {
+          "path": "text_encoder/model.safetensors.index.json",
+          "size": 22476
+        },
+        {
+          "path": "tokenizer/special_tokens_map.json",
+          "size": 7079
+        },
+        {
+          "path": "tokenizer/spiece.model",
+          "size": 4548313
+        },
+        {
+          "path": "tokenizer/tokenizer.json",
+          "size": 16837459
+        },
+        {
+          "path": "tokenizer/tokenizer_config.json",
+          "size": 61758
+        },
+        {
+          "path": "transformer/config.json",
+          "size": 451
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+          "size": 4821987820
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+          "size": 4821655760
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+          "size": 535373816
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model.safetensors.index.json",
+          "size": 74936
+        },
+        {
+          "path": "vae/config.json",
+          "size": 1701
+        },
+        {
+          "path": "vae/diffusion_pytorch_model.safetensors",
+          "size": 2818777808
+        }
+      ]
+    },
+    "TianxingChen/RoboTwin2.0": {
+      "revision": "785feb15aa4a4f532395ad2b1d2be5f28cb561ad",
+      "type": "dataset",
+      "files": [
+        {
+          "path": "background_texture.zip",
+          "size": 10970687027
+        },
+        {
+          "path": "embodiments.zip",
+          "size": 219859313
+        },
+        {
+          "path": "objects.zip",
+          "size": 3737778549
+        }
+      ]
+    }
+  }
+}
